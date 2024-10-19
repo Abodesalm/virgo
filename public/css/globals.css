@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  direction: ltr !important;
+  scroll-behavior: smooth;
+}
+
+.pad {
+  padding: 2rem 10rem;
+}
+@media screen and (max-width: 1300px) {
+  .pad {
+    padding: 2rem 6rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .pad {
+    padding: 1.5rem 4rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .pad {
+    padding: 1.5rem 4rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .pad {
+    padding: 1rem 1rem;
+  }
+}
+
+.side-pad {
+  padding: 2rem 4rem;
+}
+@media screen and (max-width: 1300px) {
+  .side-pad {
+    padding: 2rem 3rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .side-pad {
+    padding: 1.5rem 2rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .side-pad {
+    padding: 1.5rem 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .side-pad {
+    padding: 1rem 1rem;
+  }
+}
+
+.scrollTop {
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  position: fixed;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  bottom: -50px;
+  right: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  @apply bg-bglight dark:bg-darker hover:bg-bglight/50 dark:hover:bg-middark font-bold btn-ui;
+}
+
+.scrollTop.show {
+  bottom: 15px;
+}
+@media screen and (max-width: 720px) {
+  .scrollTop.show {
+    bottom: 20px;
+  }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #fff #fff transparent transparent;
+  @apply border-t-dark dark:border-t-light border-r-dark dark:border-r-light;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #fff #fff transparent transparent;
+  @apply border-t-dark dark:border-t-light border-r-dark dark:border-r-light;
+  animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.text-size-1 {
+  @apply text-[64px] xl:text-[58px] lg:text-[52px] md:text-[52px] sm:text-[52px];
+}
+
+.text-size-2 {
+  @apply text-[38px] xl:text-[34px] lg:text-[30px] md:text-[28px] sm:text-[28px];
+}
+
+.text-size-3 {
+  @apply text-[28px] xl:text-[] lg:text-[24px] md:text-[22px] sm:text-[22px];
+}
+
+.text-size-4 {
+  @apply text-[22px] xl:text-[] lg:text-[20px] md:text-[18px] sm:text-[18px];
+}
+
+.text-size-5 {
+  @apply text-[16px] xl:text-[] lg:text-[15px] md:text-[14px] sm:text-[12px];
+}
+
+.text-size-6 {
+  @apply text-[12px] xl:text-[] lg:text-[11px] md:text-[11px] sm:text-[10px];
+}
+
+.btn {
+  @apply px-2 py-1 font-medium rounded-[5px] transition-all;
+}
+
+.btn-normal {
+  @apply btn bg-dark dark:bg-light hover:bg-dark/80 dark:hover:bg-bglight text-white dark:text-dark;
+}
+
+.btn-prime {
+  @apply btn text-light bg-prime hover:bg-prime/80;
+}
+
+.btn-danger {
+  @apply btn text-light bg-danger hover:bg-danger/80;
+}
+
+.btn-success {
+  @apply btn text-light bg-success hover:bg-success/80;
+}
+
+.outlining {
+  @apply btn outline hover:outline-none text-dark dark:text-light;
+}
+
+.btn-outline {
+  @apply outlining hover:text-light dark:hover:text-dark hover:bg-dark dark:hover:bg-light;
+}
+
+.btn-outline-prime {
+  @apply outlining outline-prime hover:bg-prime;
+}
+
+.btn-outline-danger {
+  @apply outlining outline-danger hover:bg-danger;
+}
+
+.btn-outline-success {
+  @apply outlining outline-success hover:bg-success;
+}
+
+.btn-ui {
+  @apply btn hover:bg-bglight dark:hover:bg-lightdark;
+}
+
+.btn-ui-radio {
+  @apply btn bg-bglight dark:bg-darker hover:bg-bglight/50 dark:hover:bg-lightdark/60;
+}
+
+.btn-ui-radio-active {
+  @apply bg-lightdark/30 dark:bg-lightdark;
+}
+
+.heading {
+  @apply text-size-3 capitalize font-semibold;
+}
+
+.navbar {
+  @apply pad bg-bglight dark:bg-darker flex justify-between items-center select-none sticky top-0 z-10;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+.statDiv {
+  @apply bg-bglight dark:bg-middark w-[200px] h-[120px] px-4 py-2 rounded-[10px] flex flex-col relative;
+}
+.statDiv p {
+  @apply text-size-2 font-bold self-center;
+}
+.statDiv i {
+  @apply absolute bottom-[8px] right-[20px] text-[30px];
+}
+
+.empTable {
+  @apply w-full mt-4 bg-bglight dark:bg-middark text-center rounded-[20px] overflow-hidden;
+}
+.empTable td,
+.empTable th {
+  @apply py-2;
+}
+.empTable .tableRow {
+  @apply hover:bg-light dark:hover:bg-lightdark transition-colors cursor-pointer;
+}
+
+.info {
+  @apply flex flex-col;
+}
+.info .first-p {
+  @apply text-size-6 capitalize;
+}
+.info .second-p {
+  @apply capitalize text-size-4 -mt-1 ms-1;
+}
+
+.input {
+  @apply p-2 bg-bglight dark:bg-darker rounded-[6px];
+}
+.input::-moz-placeholder {
+  @apply opacity-70 text-[14px] text-lightdark dark:text-bglight/75;
+}
+.input::placeholder {
+  @apply opacity-70 text-[14px] text-lightdark dark:text-bglight/75;
+}
+
+.before-rabon::before {
+  content: "";
+  @apply absolute -left-4 top-0 w-[3px] h-full bg-success;
+}/*# sourceMappingURL=globals.css.map */

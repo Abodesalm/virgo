@@ -1,27 +1,7 @@
 const api = "https://3bod.netlify.app/api";
 //const api = "http://localhost:3000/api";
 
-interface emploeesData {
-  id: String;
-  fullName: String;
-  birthDate: Date;
-  address: String;
-  photo: String;
-  phoneNumber: String;
-  email: String;
-  jopTitle: String;
-  department: String;
-  salary: number;
-  joinDate: Date;
-  notes: String;
-  empDuration: number;
-  age: number;
-  absences: Date[];
-  thisAbsences: Date[];
-  cv: String;
-}
-
-const fakeData: emploeesData[] = [
+const fakeData = [
   {
     id: "1",
     fullName: "Abdullah Ahmad",

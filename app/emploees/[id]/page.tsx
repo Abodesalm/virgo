@@ -88,7 +88,7 @@ export default function Emploee({ params }) {
         </div>
         <div>
           <Button link={true} style="prime" external={true} url={cv}>
-            Download CV
+            <>Download CV</>
           </Button>
         </div>
       </div>

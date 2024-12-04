@@ -97,7 +97,7 @@ $money: #28b530;
   -moz-transition: 0.5s ease;
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
-  @apply bg-bglight dark:bg-darker hover:bg-bglight/50 dark:hover:bg-middark font-bold btn-ui;
+  @apply bg-light dark:bg-darker hover:bg-light/50 dark:hover:bg-middark font-bold btn-ui;
 }
 .scrollTop.show {
   bottom: 15px;
@@ -176,10 +176,10 @@ $money: #28b530;
   @apply text-[28px] xl:text-[] lg:text-[24px] md:text-[22px] sm:text-[22px];
 }
 .text-size-4 {
-  @apply text-[22px] xl:text-[] lg:text-[20px] md:text-[18px] sm:text-[18px];
+  @apply text-[24px] xl:text-[] lg:text-[20px] md:text-[18px] sm:text-[18px];
 }
 .text-size-5 {
-  @apply text-[16px] xl:text-[] lg:text-[15px] md:text-[14px] sm:text-[12px];
+  @apply text-[14px] xl:text-[] lg:text-[14px] md:text-[14px] sm:text-[12px];
 }
 .text-size-6 {
   @apply text-[12px] xl:text-[] lg:text-[11px] md:text-[11px] sm:text-[10px];

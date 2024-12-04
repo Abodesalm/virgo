@@ -1,5 +1,5 @@
 .btn {
-  @apply px-2 py-1 font-medium rounded-[5px] transition-all;
+  @apply px-2 py-1 rounded-[5px] transition-all;
 }
 .btn-normal {
   @apply btn bg-dark dark:bg-light hover:bg-dark/80 dark:hover:bg-bglight text-white dark:text-dark;
@@ -31,11 +31,18 @@
   @apply outlining outline-success hover:bg-success;
 }
 .btn-ui {
-  @apply btn hover:bg-bglight dark:hover:bg-lightdark;
+  @apply btn hover:bg-light dark:hover:bg-lightdark;
+}
+.btn-ui-blur {
+  @apply btn text-dark/80 dark:text-bglight/80 hover:text-darker dark:hover:text-light;
 }
 .btn-ui-radio {
   @apply btn bg-bglight dark:bg-darker hover:bg-bglight/50 dark:hover:bg-lightdark/60;
 }
 .btn-ui-radio-active {
   @apply bg-lightdark/30 dark:bg-lightdark;
+}
+
+.buttonRow {
+  @apply flex flex-row items-center gap-1;
 }

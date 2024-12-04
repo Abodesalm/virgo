@@ -38,7 +38,7 @@ export default function Popup(
       confirmButtonText: agreeText,
       cancelButtonText: cancelText,
       customClass: {
-        popup: "bg-bglight dark:bg-dark/80",
+        popup: "bg-light dark:bg-dark/80",
         cancelButton: styling(cancelStyle),
         confirmButton: styling(agreeStyle),
         title: "text-size-3 text-dark dark:text-light",

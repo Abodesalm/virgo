@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 export default function Button({
-  children = <></>,
+  children = <></> || "",
   style = "normal",
   className = "",
   action = () => {},
@@ -21,6 +21,7 @@ export default function Button({
     else if (type === "outline-danger") return " btn-outline-danger ";
     else if (type === "outline-success") return " btn-outline-success ";
     else if (type === "ui") return " btn-ui ";
+    else if (type === "ui-blur") return " btn-ui-blur ";
     else if (type === "ui-radio") return " btn-ui-radio ";
   };
 

@@ -1,18 +1,17 @@
 @use "./helpers/statics";
 @use "./helpers/buttons";
+@use "./helpers/components";
 
 .heading {
   @apply text-size-3 capitalize font-semibold;
 }
 
 .navbar {
-  @apply pad bg-bglight dark:bg-darker flex justify-between items-center select-none sticky top-0 z-10;
-  padding-top: 14px !important;
-  padding-bottom: 14px !important;
+  @apply py-4 px-10 bg-light dark:bg-darker flex justify-between items-center drop-shadow select-none sticky top-0 z-10;
 }
 
 .statDiv {
-  @apply bg-bglight dark:bg-middark w-[200px] h-[120px] px-4 py-2 rounded-[10px] flex flex-col relative;
+  @apply bg-light dark:bg-middark w-[200px] h-[120px] px-4 py-2 rounded-[10px] flex flex-col relative;
   p {
     @apply text-size-2 font-bold self-center;
   }
@@ -20,35 +19,19 @@
     @apply absolute bottom-[8px] right-[20px] text-[30px];
   }
 }
-.empTable {
-  @apply w-full mt-4 bg-bglight dark:bg-middark text-center rounded-[20px] overflow-hidden;
-  td,
-  th {
-    @apply py-2;
-  }
-  .tableRow {
-    @apply hover:bg-light dark:hover:bg-lightdark transition-colors cursor-pointer;
-  }
-}
-
-.info {
-  @apply flex flex-col;
-  .first-p {
-    @apply text-size-6 capitalize;
-  }
-  .second-p {
-    @apply capitalize text-size-4 -mt-1 ms-1;
-  }
-}
 
 .input {
-  @apply p-2 bg-bglight dark:bg-darker rounded-[6px];
+  @apply p-2 bg-bglight dark:bg-darker rounded-[6px] text-size-6;
   &::placeholder {
-    @apply opacity-70 text-[14px] text-lightdark dark:text-bglight/75;
+    @apply opacity-70 text-[14px] text-lightdark dark:text-bglight/75 capitalize text-size-6;
   }
 }
 
 .before-rabon::before {
   content: "";
   @apply absolute -left-4 top-0 w-[3px] h-full bg-success;
+}
+
+.form {
+  @apply w-fit p-8 flex flex-col gap-4 items-center drop-shadow rounded-lg;
 }

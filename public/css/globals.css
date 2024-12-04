@@ -80,7 +80,7 @@
   -moz-transition: 0.5s ease;
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
-  @apply bg-bglight dark:bg-darker hover:bg-bglight/50 dark:hover:bg-middark font-bold btn-ui;
+  @apply bg-light dark:bg-darker hover:bg-light/50 dark:hover:bg-middark font-bold btn-ui;
 }
 
 .scrollTop.show {
@@ -162,11 +162,11 @@
 }
 
 .text-size-4 {
-  @apply text-[22px] xl:text-[] lg:text-[20px] md:text-[18px] sm:text-[18px];
+  @apply text-[24px] xl:text-[] lg:text-[20px] md:text-[18px] sm:text-[18px];
 }
 
 .text-size-5 {
-  @apply text-[16px] xl:text-[] lg:text-[15px] md:text-[14px] sm:text-[12px];
+  @apply text-[14px] xl:text-[] lg:text-[14px] md:text-[14px] sm:text-[12px];
 }
 
 .text-size-6 {
@@ -174,7 +174,7 @@
 }
 
 .btn {
-  @apply px-2 py-1 font-medium rounded-[5px] transition-all;
+  @apply px-2 py-1 rounded-[5px] transition-all;
 }
 
 .btn-normal {
@@ -214,7 +214,11 @@
 }
 
 .btn-ui {
-  @apply btn hover:bg-bglight dark:hover:bg-lightdark;
+  @apply btn hover:bg-light dark:hover:bg-lightdark;
+}
+
+.btn-ui-blur {
+  @apply btn text-dark/80 dark:text-bglight/80 hover:text-darker dark:hover:text-light;
 }
 
 .btn-ui-radio {
@@ -225,18 +229,20 @@
   @apply bg-lightdark/30 dark:bg-lightdark;
 }
 
+.buttonRow {
+  @apply flex flex-row items-center gap-1;
+}
+
 .heading {
   @apply text-size-3 capitalize font-semibold;
 }
 
 .navbar {
-  @apply pad bg-bglight dark:bg-darker flex justify-between items-center select-none sticky top-0 z-10;
-  padding-top: 14px !important;
-  padding-bottom: 14px !important;
+  @apply py-4 px-10 bg-light dark:bg-darker flex justify-between items-center drop-shadow select-none sticky top-0 z-10;
 }
 
 .statDiv {
-  @apply bg-bglight dark:bg-middark w-[200px] h-[120px] px-4 py-2 rounded-[10px] flex flex-col relative;
+  @apply bg-light dark:bg-middark w-[200px] h-[120px] px-4 py-2 rounded-[10px] flex flex-col relative;
 }
 .statDiv p {
   @apply text-size-2 font-bold self-center;
@@ -245,38 +251,21 @@
   @apply absolute bottom-[8px] right-[20px] text-[30px];
 }
 
-.empTable {
-  @apply w-full mt-4 bg-bglight dark:bg-middark text-center rounded-[20px] overflow-hidden;
-}
-.empTable td,
-.empTable th {
-  @apply py-2;
-}
-.empTable .tableRow {
-  @apply hover:bg-light dark:hover:bg-lightdark transition-colors cursor-pointer;
-}
-
-.info {
-  @apply flex flex-col;
-}
-.info .first-p {
-  @apply text-size-6 capitalize;
-}
-.info .second-p {
-  @apply capitalize text-size-4 -mt-1 ms-1;
-}
-
 .input {
-  @apply p-2 bg-bglight dark:bg-darker rounded-[6px];
+  @apply p-2 bg-bglight dark:bg-darker rounded-[6px] text-size-6;
 }
 .input::-moz-placeholder {
-  @apply opacity-70 text-[14px] text-lightdark dark:text-bglight/75;
+  @apply opacity-70 text-[14px] text-lightdark dark:text-bglight/75 capitalize text-size-6;
 }
 .input::placeholder {
-  @apply opacity-70 text-[14px] text-lightdark dark:text-bglight/75;
+  @apply opacity-70 text-[14px] text-lightdark dark:text-bglight/75 capitalize text-size-6;
 }
 
 .before-rabon::before {
   content: "";
   @apply absolute -left-4 top-0 w-[3px] h-full bg-success;
+}
+
+.form {
+  @apply w-fit p-8 flex flex-col gap-4 items-center drop-shadow rounded-lg;
 }/*# sourceMappingURL=globals.css.map */
